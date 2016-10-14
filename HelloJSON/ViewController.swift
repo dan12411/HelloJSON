@@ -12,12 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let somePerson = Person(name: "Dan", email: "abc@gmil.com", number: "123-456-789", photo: "http://jjj.jpg")
+    }
+    
+    func setInfo(person: Person) {
+        //
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

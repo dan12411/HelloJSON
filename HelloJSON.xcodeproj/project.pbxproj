@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5630089E1DB9CDFE001194DB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630089D1DB9CDFE001194DB /* Reachability.m */; };
 		563D8B1B1DB0CD4B00441345 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D8B1A1DB0CD4B00441345 /* AppDelegate.swift */; };
 		563D8B1D1DB0CD4B00441345 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D8B1C1DB0CD4B00441345 /* ViewController.swift */; };
 		563D8B201DB0CD4B00441345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563D8B1E1DB0CD4B00441345 /* Main.storyboard */; };
 		563D8B221DB0CD4B00441345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563D8B211DB0CD4B00441345 /* Assets.xcassets */; };
 		563D8B251DB0CD4B00441345 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563D8B231DB0CD4B00441345 /* LaunchScreen.storyboard */; };
 		563D8B2D1DB0D21A00441345 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D8B2C1DB0D21A00441345 /* Person.swift */; };
+		56535AF51DB9A8BD00F918B4 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56535AF41DB9A8BD00F918B4 /* MyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5630089B1DB9CDFD001194DB /* HelloJSON-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloJSON-Bridging-Header.h"; sourceTree = "<group>"; };
+		5630089C1DB9CDFE001194DB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5630089D1DB9CDFE001194DB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		563D8B171DB0CD4B00441345 /* HelloJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563D8B1A1DB0CD4B00441345 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		563D8B1C1DB0CD4B00441345 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		563D8B241DB0CD4B00441345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		563D8B261DB0CD4B00441345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563D8B2C1DB0D21A00441345 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		56535AF41DB9A8BD00F918B4 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,12 @@
 			children = (
 				563D8B2E1DB0D23200441345 /* Supporting Files */,
 				563D8B1C1DB0CD4B00441345 /* ViewController.swift */,
+				56535AF41DB9A8BD00F918B4 /* MyTableViewController.swift */,
 				563D8B1E1DB0CD4B00441345 /* Main.storyboard */,
 				563D8B2C1DB0D21A00441345 /* Person.swift */,
+				5630089C1DB9CDFE001194DB /* Reachability.h */,
+				5630089D1DB9CDFE001194DB /* Reachability.m */,
+				5630089B1DB9CDFD001194DB /* HelloJSON-Bridging-Header.h */,
 			);
 			path = HelloJSON;
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 					563D8B161DB0CD4B00441345 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8H7X36TF25;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,6 +162,8 @@
 				563D8B2D1DB0D21A00441345 /* Person.swift in Sources */,
 				563D8B1D1DB0CD4B00441345 /* ViewController.swift in Sources */,
 				563D8B1B1DB0CD4B00441345 /* AppDelegate.swift in Sources */,
+				56535AF51DB9A8BD00F918B4 /* MyTableViewController.swift in Sources */,
+				5630089E1DB9CDFE001194DB /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +284,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8H7X36TF25;
 				INFOPLIST_FILE = HelloJSON/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ALPHAcamp.HelloJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloJSON/HelloJSON-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -284,11 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8H7X36TF25;
 				INFOPLIST_FILE = HelloJSON/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ALPHAcamp.HelloJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloJSON/HelloJSON-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -312,6 +330,7 @@
 				563D8B2B1DB0CD4B00441345 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

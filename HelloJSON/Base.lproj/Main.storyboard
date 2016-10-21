@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eaL-Oj-3po">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BgG-kt-EnA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Random User-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloJSON" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1n4-Z7-LwU">
@@ -38,7 +38,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.7369825510204141" green="0.33958999899960257" blue="0.33958999899960257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="v7m-KE-Evg" secondAttribute="trailing" id="7bp-ku-6Uu"/>
                                     <constraint firstItem="v7m-KE-Evg" firstAttribute="top" secondItem="UIN-mX-OGO" secondAttribute="bottom" constant="25" id="S1E-WO-dXP"/>
@@ -48,8 +47,9 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeG-0B-0XD">
+                                <color key="backgroundColor" red="0.84707707166671753" green="0.39294090867042542" blue="0.38666063547134399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="chd-G8-TtY" kind="embed" id="GqH-C6-v8H"/>
+                                    <segue destination="chd-G8-TtY" kind="embed" identifier="connect" id="GqH-C6-v8H"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -66,16 +66,20 @@
                             <constraint firstAttribute="trailing" secondItem="1n4-Z7-LwU" secondAttribute="trailing" id="rcT-ZY-56w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qzB-xI-mgD"/>
+                    <navigationItem key="navigationItem" title="Random User" id="qzB-xI-mgD"/>
+                    <connections>
+                        <outlet property="myImage" destination="UIN-mX-OGO" id="iuj-uD-IiI"/>
+                        <outlet property="nameLabel" destination="v7m-KE-Evg" id="yUP-FX-Hqm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.79999999999995" y="-545.57721139430294"/>
+            <point key="canvasLocation" x="1716" y="-545.57721139430294"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Table View Controller-->
         <scene sceneID="pQS-Th-dt3">
             <objects>
-                <tableViewController id="chd-G8-TtY" sceneMemberID="viewController">
+                <tableViewController id="chd-G8-TtY" customClass="MyTableViewController" customModule="HelloJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="h5f-y1-xuQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="308"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,28 +165,38 @@
                             <outlet property="delegate" destination="chd-G8-TtY" id="xaV-Dj-zCC"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="emailAdressLabel" destination="mOC-ib-DL1" id="idk-BN-b9a"/>
+                        <outlet property="phoneNumberLabel" destination="4YG-9i-LXO" id="lPI-Ng-LUX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1V-85-mbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489" y="-382"/>
+            <point key="canvasLocation" x="2535" y="-545"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="bpg-OG-IOh">
+        <scene sceneID="u6L-K3-q3T">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eaL-Oj-3po" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BgG-kt-EnA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h3L-eA-1bU">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yp2-cx-LoM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ksJ-kY-qTc">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lkt-cJ-rBM"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iHc-az-Voq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="le5-f8-LYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kp4-Oi-3kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.799999999999997" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="1009" y="-544"/>
         </scene>
     </scenes>
 </document>
